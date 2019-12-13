@@ -1,0 +1,58 @@
+<body class="d-flex flex-column">
+	<!-- barra de navegacion -->
+	<!-- hecho con bootstrap -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark p-0">
+		<div class="container">
+			<li id="logo"><a href="#">AA</a></li>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item active">
+						<a [routerLink]="['/sobre-mi']" [routerLinkActive]="['actived']">Sobre mi</a>
+					</li>
+					<li class="nav-item">
+						<a [routerLink]="['/proyectos']" [routerLinkActive]="['actived']">Proyectos</a>
+					</li>
+					<li class="nav-item">
+						<a [routerLink]="['/crear-proyecto']" [routerLinkActive]="['actived']">Crear
+							proyecto</a>
+					</li>
+					<li class="nav-item">
+						<a [routerLink]="['/contacto']" [routerLinkActive]="['actived']">Contacto</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div id="page-content">
+		<div class="py-5 text-white">
+			<router-outlet></router-outlet>
+		</div>
+	</div>
+	<footer id="sticky-footer" >
+		<div class="container p-3 text-white text-center">
+			<p>Copyright &copy; AngeloAroni</p>
+		</div>
+	</footer>
+
+	<!-- NEWSLETTER -->
+	<!-- 	
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<input type="text" class="form-control form-control-lm" placeholder="Enter your Name">
+			</div>
+			<div class="col-md-4">
+				<input type="text" class="form-control form-control-lm" placeholder="Enter your Email">
+			</div>
+			<div class="col-md-4">
+				<button class="btn btn-primary btn-lm btn-block">
+					Suscribete
+				</button>
+			</div>
+		</div>
+	</div> -->
+</body>
