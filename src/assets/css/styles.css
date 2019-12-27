@@ -15,18 +15,38 @@ body, html{
 }
 /* el body */
 body{
-    /* background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%); */
-    background: linear-gradient(rgba(95,114,190,.8), rgba(155,35,234,.7)), url(../img/tegnologia.jpg);
+
+    background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url(../img/fondo.jpg);
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
 
 }
+/* css de about */
+#about{
+    padding-top: 10rem;
+    padding-bottom: calc(8.45rem - 100px);
+}
+#about h1{
+    font-size: 3rem;
+}
+#about p{
+    font-size: 1.15rem;
+}
+hr.divider {
+    max-width: 3.25rem;
+    border-width: 0.2rem;
+    border-color: rgba(48, 51, 107,.8);
+}
+
+/* trabjo con flex */
 #page-content {
     flex: 1 0 auto;
-  }
+}
+
 /*barra de navegacion header*/
-.navbar{
-    box-shadow: 2px 1px 3px black;
+.navbar{    
     display: block;
     opacity: .9;
     text-transform: uppercase;
@@ -47,54 +67,50 @@ body{
 }
 
 .navbar a:hover, .actived{
-    background: rgba(0, 0, 0, .8);
-    text-decoration: none;
-    color: gray;
+    background: rgba(48, 51, 107,.8);
+    text-decoration: none;    
+    color: rgba(149, 175, 192,1.0);
 }
+
 /*Logo*/
-
 #logo{
-    display: block;
-    font-family: "finger";
-    font-size: 40px;
-    line-height: 65px;
+    display: block;    
 }
-#logo a{
-    transition: color 500ms, transform 500ms;
-}
-header #logo a:hover{
+#logo a:hover{    
     background: transparent;
-    color: black;
-    transform: scale(1.50,1.50);
+    transform: scale(1.22,1.18);
 }
 
-/* Pagina de projectos */
-#project{    
-    list-style: none;
-    /* clear: right; */
-    display: block;
-    float: left;
-}
-#project img{
-   width: 100%;
-    height: 178px;
-}
 /* quitar el resaltado de los links del listado del projectos */
 #project a{
     text-decoration: none;
     color: black;
 }
+
 #sticky-footer {
     flex-shrink: none;
 }
+
+
+/* boton leer mas de about */
+#boton-about{   
+    border-radius: 20px; 
+    border: 0px;
+    background: rgba(48, 51, 107,.8);    
+}
+#boton-about:hover{
+    background: rgba(72, 52, 212,1.0);    
+}
+/* footer */
 footer{
     background: rgba(48, 51, 107,.8);
     width: 100%;
 }
+/* barra social */
 .social-icons a {
     display: inline-block;
-    height: 3.5rem;
-    width: 3.5rem;
+    height: 2.8rem;
+    width: 2.8rem;
     background-color: rgba(48, 51, 107,.8);
     color: #fff !important;
     border-radius: 100%;
@@ -109,5 +125,67 @@ footer{
   }
   
   .social-icons a:hover {
-    background-color: rgba(83, 92, 104,1.0);
+    background-color: rgba(72, 52, 212,1.0);
   }
+
+  #fotodetalles{
+      width: 700px;
+      height: 300px;
+  }
+
+  
+
+/* Pagina de projectos */
+#project{    
+    list-style: none;
+    clear: right;
+    display: block;
+    float: left;
+}
+#project img{
+   width: 100%;
+    height: 250px;
+}
+
+/* efectos de proyectos */
+  #portfolio .container-fluid {
+    max-width: 1920px;
+  }
+  
+  #portfolio .container-fluid .portfolio-box {
+    position: relative;
+    display: block;
+  }
+  
+  #portfolio .container-fluid .portfolio-box .portfolio-box-caption {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    opacity: 0;
+    color: #fff;
+    background: rgba(48, 51, 107,.8);
+    transition: opacity 0.25s ease;
+    text-align: center;
+  }
+  
+  #portfolio .container-fluid .portfolio-box .portfolio-box-caption .project-category {
+    font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  
+  #portfolio .container-fluid .portfolio-box .portfolio-box-caption .project-name {
+    font-size: 1.2rem;
+  }
+  
+  #portfolio .container-fluid .portfolio-box:hover .portfolio-box-caption {
+    opacity: 1;
+  }
+  
